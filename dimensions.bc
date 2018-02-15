@@ -1,0 +1,141 @@
+sheetrad=17*25.4
+sheetlen=11*25.4
+print "# Paper Outline\n"
+# Corner markers
+markerradius=5.0
+print "a\n"
+print "ce\n"
+print "0,0\n"
+print markerradius, "\n"
+print "0\n"
+print "90\n"
+print "l\n"
+print "1,", markerradius, "\n"
+print "0,0\n"
+print markerradius, ",1\n"
+print "a\n"
+print "ce\n"
+print "0,", sheetlen, "\n"
+print markerradius, "\n"
+print "270\n"
+print "0\n"
+print "l\n"
+print markerradius, ",", sheetlen-1, "\n"
+print "0,", sheetlen, "\n"
+print "1,", sheetlen-markerradius, "\n"
+print "a\n"
+print "ce\n"
+print sheetrad, ",", sheetlen, "\n"
+print markerradius, "\n"
+print "180\n"
+print "270\n"
+print "l\n"
+print sheetrad-1, ",", sheetlen-markerradius, "\n"
+print sheetrad, ",", sheetlen, "\n"
+print sheetrad-markerradius, ",", sheetlen-1, "\n"
+print "a\n"
+print "ce\n"
+print sheetrad, ",0", "\n"
+print markerradius, "\n"
+print "90\n"
+print "180\n"
+print "l\n"
+print sheetrad-markerradius, ",1\n"
+print sheetrad, ",0", "\n"
+print sheetrad-1, ",", markerradius, "\n"
+print "k\n"
+# Sheet 1
+sheet=1
+pointradius=0.2
+holeradius=11.0
+# Radial offset of center of leg from left edge of paper
+legradoffset=12.9
+# Center of leg and flat baffle supports to base of tower
+leglenoffset=25.0
+print "# Sheet ", sheet, ":\n"
+print "# leg center\n"
+print "ci\n"
+print legradoffset, ",", leglenoffset, "\n"
+print pointradius, "\n"
+print legradoffset, ",", leglenoffset, "\n"
+print holeradius, "\n"
+print "# flat baffle support centers\n"
+print legradoffset + 90.0, ",", leglenoffset, "\n"
+print pointradius, "\n"
+print legradoffset + 90.0, ",", leglenoffset, "\n"
+print holeradius, "\n"
+print legradoffset + 270.0, ",", leglenoffset, "\n"
+print pointradius, "\n"
+print legradoffset + 270.0, ",", leglenoffset, "\n"
+print holeradius, "\n"
+# Exit gate height
+gateheight=51.0
+# Exit gate edge to flat baffle's support's hole
+gateradoffset=35.0
+print "# exit gate corners\n"
+print "l\n"
+print legradoffset + 90.0 + gateradoffset, ",", 0.0, "\n"
+print legradoffset + 90.0 + gateradoffset, ",", gateheight, "\n"
+print legradoffset + 270.0 - gateradoffset, ",", gateheight, "\n"
+print legradoffset + 270.0 - gateradoffset, ",", 0.0, "\n"
+# Height (center-to-center of bottom and top) of baffle staircase
+strslen=360.0
+# Width (center-to-center of bottom and top) of baffle staircase
+strsrad=360.0
+print "l\n"
+print strsrad, ",", sheetlen, "\n"
+print strsrad, ",0", "\n"
+# Center of lowest regular baffle to base of tower
+strslenoffset=leglenoffset+62.0
+# Radial offset of lowest regular baffle from left edge of paper
+strsradoffset=legradoffset
+# Number of stairs
+strs=15
+# Offset between adjacent stairs
+adjlenoffset=strslen/(strs-1)
+adjradoffset=strsrad/(strs-1)
+# Height of sheet
+sheetlen=279.4
+print "# stairs\n"
+print "ci\n"
+for (n=0;n<strs;n++)
+{
+  tempx=strsradoffset+(adjradoffset*n)
+  if (tempx >= 360.0) { tempx-=360.0 }
+  tempy=strslenoffset+(adjlenoffset*n)
+  if (tempy >= sheetlen) {
+    if (sheet == 1) {
+      # Sheet 2
+      sheet+=1
+      print "# Sheet ", sheet, ":\n"
+      print "# stairs\n"
+      print "ci\n"
+    }
+    tempy-=sheetlen
+  }
+  scale=1
+  print (tempx+0.05)/1, ",", (tempy+0.05)/1, "\n"
+  print pointradius, "\n"
+  print (tempx+0.05)/1, ",", (tempy+0.05)/1, "\n"
+  print holeradius, "\n"
+  scale=20
+  tempx+=(strsrad/2)
+  if (tempx >= 360.0) { tempx-=360.0 }
+  scale=1
+  print (tempx+0.05)/1, ",", (tempy+0.05)/1, "\n"
+  print pointradius, "\n"
+  print (tempx+0.05)/1, ",", (tempy+0.05)/1, "\n"
+  print holeradius, "\n"
+  scale=20
+}
+# Center of top baffle to topmost edge
+headroom=29.0
+# Total height
+totheight=strslenoffset+strslen+headroom-sheetlen
+print "# topmost edge\n"
+print "l\n"
+print "0.0,", totheight, "\n"
+print strsrad, ",", totheight, "\n"
+print strsrad, ",0", "\n"
+print "k\n"
+quit
