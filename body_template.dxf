@@ -23,17 +23,17 @@ $INSBASE
   9
 $EXTMIN
  10
--9.184850993605148e-16
+10000000000
  20
-0
+10000000000
  30
 0
   9
 $EXTMAX
  10
-431.8
+-10000000000
  20
-279.4
+-10000000000
  30
 0
   9
@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-paperoutline
+tabloidpaperoutline
   9
 $CELTYPE
   6
@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-6.32467578925758
+6.345499590455136
  22
-14.16727376793698
+14.17436272153615
  13
 0
  23
@@ -1151,7 +1151,7 @@ AcDbViewportTableRecord
  40
 31.3703919147176
  41
-1.580645161290323
+1.78984238178634
  42
 50
  43
@@ -2261,7 +2261,7 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-paperoutline
+tabloidpaperoutline
  70
     0
  62
@@ -4323,7 +4323,7 @@ ARC
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4351,7 +4351,7 @@ LINE
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4375,7 +4375,7 @@ LINE
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4399,7 +4399,7 @@ ARC
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4427,7 +4427,7 @@ LINE
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4451,7 +4451,7 @@ LINE
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4475,7 +4475,7 @@ ARC
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4503,7 +4503,7 @@ LINE
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4527,7 +4527,7 @@ A0
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4551,7 +4551,7 @@ A1
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4579,7 +4579,7 @@ A2
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62
@@ -4603,7 +4603,7 @@ A3
 100
 AcDbEntity
   8
-paperoutline
+tabloidpaperoutline
   6
 ByLayer
  62

@@ -12,10 +12,14 @@ template indicate the:
    standard baffles (all constructed from 1/2" PVC pipe).
  Dice exit gate
 
+An additional template file for the lower baffle platform (made of paneling or
+thin plywood) is also included.
+
 This repository also contains the generated files for convenience.
 
-Steps to reproduce:
-1. At bash shell: bc -l dimensions.bc > librecad_commands.txt
+Steps to create templates (if not modifying the templates skip to the step 4):
+
+1. At bash shell: bc -l body_dimensions.bc > librecad_commands.txt
 Output is commands that can be entered into LibreCAD's command window.
 
 2. Paste the following set of commands from the commands file each into their
@@ -49,3 +53,7 @@ version in the Ubuntu repository. It is available, however, in version
      gate--to the bottom portion of the 4" pipe. Butt the bottom edge of sheet 2
      against the top edge of sheet 1 and tape to the pipe. The 4" piece should
      now be ready for drilling and cutting.
+
+6. Tape the baffle template to the paneling and use a sharp knife to cut through
+     the template paper, scoring the paneling. This scoring can be marked with a
+     pencil to provide a very visible line for cutting out the baffle.
